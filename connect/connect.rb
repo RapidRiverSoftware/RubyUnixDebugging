@@ -12,6 +12,6 @@ s = TCPSocket.new hostname, port
 
 die "Unable to connect to #{hostname}:#{port}: #{$!}" unless s
 
-while true
-  sleep 1
+while line = s.readline
+  puts line
 end
